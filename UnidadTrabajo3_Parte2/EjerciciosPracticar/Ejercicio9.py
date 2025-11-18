@@ -9,32 +9,24 @@
 limInferior = int(input('Dime el limite inferior: '))
 limSuperior = int(input('Dime el limite superior: '))
 
-recountLimit = limInferior
-
-numIntroIsIn = False
 sumaNum = 0
 numFuera = 0
-
+numIgualLimit = 0
 
 while limInferior < limSuperior:
     numIntroducido = int(input('Dime un número, para parar escribe 0: '))
 
     while numIntroducido != 0:
-        while recountLimit <= limSuperior:
-            if numIntroducido == recountLimit:
-                numIntroIsIn = True
-                continue
-            else:
-                recountLimit += 1
-        else:
-            numIntroIsIn = False
-        if numIntroIsIn:
-            sumaNum = numIntroducido + sumaNum
+        if numIntroducido > limInferior and numIntroducido < limSuperior:
+            sumaNum = sumaNum + numIntroducido
+        elif numIntroducido == limInferior or numIntroducido == limSuperior:
+            numIgualLimit += 1
         else:
             numFuera += 1
         numIntroducido = int(input('Dime otro número, para parar escribe 0: '))
     else:
-        print(f'La suma de los numeros de dentro del intervalo es: {sumaNum} y los números fuera son {numFuera}')
+        print(f'La suma de los numeros de dentro del intervalo es: {sumaNum}, los números fuera son {numFuera} y se ha introducido un numero igual a los limites {numIgualLimit} veces')
+        break
 
         
 else:
