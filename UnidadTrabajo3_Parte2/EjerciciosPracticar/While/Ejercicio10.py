@@ -5,6 +5,7 @@
 # además de los intentos que te quedan (tienes 10 intentos para acertarlo). El programa termina cuando se acierta el número
 # (además te dice en cuantos intentos lo has acertado), si se llega al límite de intentos te muestra el número que había generado.
 
+#Utilizamos la libreria random para el ejercicio
 import random
 
 numElegido = random.randrange(1,100)
