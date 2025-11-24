@@ -7,7 +7,6 @@ keepPlay = True
 
 while keepPlay:
     coin = random.randrange(0,2)
-    print(coin)
     
     if elePlayer != 'c' and elePlayer !='x':
         print('No has escrito una elección adecuada, vuelve a elegir')
