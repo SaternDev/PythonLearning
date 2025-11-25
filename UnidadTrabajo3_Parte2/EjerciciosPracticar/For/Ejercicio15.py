@@ -12,7 +12,7 @@ payHours = 0.
 
 for i in (1, numWorkers + 1):
     WorkHours = round(float(input('Cuantas horas has trabajado? \n')), 1)
-    payHours += WorkHours
-    print(f'El trabajador {i} se le paga por la semana: {totalPayHour * WorkHours}')
+    payHours += WorkHours * 7
+    print(f'El trabajador {i} se le paga por la semana: {totalPayHour * WorkHours  * 7}')
 
-print(f'La empresa tiene {numWorkers} trabajadores, la empresa tiene que pagar por todos ellos a la semana {payHours * totalPayHour}€')
+print(f'La empresa tiene {numWorkers} trabajadores, la empresa tiene que pagar por todos ellos a la semana {payHours * totalPayHour * 7}€')
