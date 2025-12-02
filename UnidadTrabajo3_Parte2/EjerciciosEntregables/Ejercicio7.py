@@ -7,8 +7,11 @@
 from pathlib import Path
 
 archivo = Path(input('Dime el nombre de un archivo: '))
+tamañoArch = 0
 
-
-while not Path(archivo).exists:
+while not archivo.is_file():
     print('El archivo no existe, dime un archivo que si exista')
     archivo = Path(input('Dime el nombre de un archivo: '))
+else:
+    tamañoArch = archivo.stat().st_size
+    print(f'El archivo ocupa: {tamañoArch} bytes')
