@@ -28,7 +28,7 @@ numDays = int(input('Dime el número de días: '))
 
 actualDir = Path.cwd()
 backupsDir = Path(str(actualDir) + '/' + 'backups')
-yearDir = Path(str(actualDir) + '/' + str(year))
+yearDir = Path(str(backupsDir) + '/' + str(year))
 
 if month > month2:
     print('Has escrito un rango no adecuado para los meses, vuelve a indicarlos')
@@ -41,15 +41,15 @@ if not backupsDir.is_dir():
 
 for b in range(month, month2 + 1):
 
-    monthDir = Path(str(yearDir) + '/' + str(b))
+    monthDir = Path(str(yearDir) + '/' + str(b).zfill(2))
 
     if not yearDir.exists():
-            Path.mkdir(Path('backups/' + str(year)))
+            Path.mkdir(yearDir)
     
     if not monthDir.exists():
         Path.mkdir(monthDir)
 
     for i in range(1, numDays + 1):
-        dayDir = Path(str(monthDir) + '/' + 'dia_' + str(i))
+        dayDir = Path(str(monthDir) + '/' + 'dia_' + str(i).zfill(2))
         if not dayDir.exists():
             Path.mkdir(dayDir)
