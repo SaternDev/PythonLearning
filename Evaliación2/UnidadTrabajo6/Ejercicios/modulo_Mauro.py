@@ -105,15 +105,14 @@ def es_fecha_correcta(dia, mes, anyo):
     
 #Ejercicio14
 def calcula_ganancias_uva(precio_kilo, kilos, tipo, tamanyo):
-    precio_inicial = precio_kilo
-    kilos = int(input("Introduce cuántos kilos has vendido: "))
-    tipo = input("Introduce el tipo de la UVA (A/B): ").upper()
+    precio_inicial = float(precio_kilo)
+    tipo = str(tipo.upper())
+    tamanyo = str(tamanyo)
 
     #if tipo not in ["A", "B"]:
     if tipo != "A" and tipo != "B":
         print("Tipo incorrecto")
     else:
-        tamanyo
 
         #if tamanyo not in ["1", "2"]:
         if tamanyo != "1" and tamanyo != "2":
@@ -131,8 +130,8 @@ def calcula_ganancias_uva(precio_kilo, kilos, tipo, tamanyo):
                     precio_inicial -= 50
 
             precio_final = precio_inicial * kilos
-
-            print(f"La ganancia es {precio_final / 100:.2f} euros.")
+            ganancias = float(precio_final / 100)
+            return ganancias
 
 #Ejercicio 15
 def costes_viaje(n):
@@ -141,11 +140,11 @@ def costes_viaje(n):
     if (cantAlummnos < 30):
         print(f'El  costo de la renta es: 2850 y cada alumno debe pagar {2850 / cantAlummnos}')
     elif (cantAlummnos >= 100):
-        print(f'El costo de bus es: {cantAlummnos * 65}€ y cada alumno debe pagar 65€')
+        return cantAlummnos * 65, 65
     elif (cantAlummnos <= 99 and cantAlummnos >= 50):
-        print(f'El costo del bus es: {cantAlummnos * 70}€ y cada alumno debe pagar 70€')
+        return cantAlummnos * 70, 70
     elif (cantAlummnos <= 49 and cantAlummnos >= 30):
-        print(f'El costo del bus es: {cantAlummnos * 95}€ y cada alumno debe pagar 95€')
+        return cantAlummnos * 95, 95
 
 #Ejercicio 16
 def coste_llamada(tiempo, es_domingo, turno):
@@ -169,41 +168,41 @@ def coste_llamada(tiempo, es_domingo, turno):
         elif turno == "T":
             coste += coste * 0.10  # 10% adicional
 
-    print(f"El coste de la llamada es: {coste / 100:.2f} euros.")
+    return round(coste / 100,2)
 
-#Ejercicio 16
+#Ejercicio 18
 def dia_escrito(n):
     dia = n
 
     if dia == 1:
-        print("Lunes")
+        return "Lunes"
     elif dia == 2:
-        print("Martes")
+        return "Martes"
     elif dia == 3:
-        print("Miércoles")
+        return "Miércoles"
     elif dia == 4:
-        print("Jueves")
+        return "Jueves"
     elif dia == 5:
-        print("Viernes")
+        return "Viernes"
     elif dia == 6:
-        print("Sábado")
+        return "Sábado"
     elif dia == 7:
-        print("Domingo")
+        return "Domingo"
     else:
-        print("Día incorrecto")
+        return 'Incorrecto'
 
 #Ejercicio 19
 def num_dias_mes(mes):
     #if mes in [1, 3, 5, 7, 8, 10, 12]:
     if mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12:
-        print("31 días")
+        return 31
     elif mes == 2:
-        print("28 o 29 días")
+        return 29
     elif mes == 4 or mes == 6 or mes == 9 or mes == 11:
     #elif mes in [4, 6, 9, 11]:
-        print("30 días")
+        return 30
     else:
-        print("Mes incorrecto")
+        return "Mes incorrecto"
 
 #Ejercicio 20
 def calcula_coste_transporte(peso, zona):

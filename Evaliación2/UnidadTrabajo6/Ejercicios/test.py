@@ -98,3 +98,35 @@ else:
     print('La fecha es incorrecta')
 
 #EJERCICIO 14
+print(f'Función "calcula_ganancias_uva", devuelve la ganancia en euros. \n Requiere de 4 argumentos, el precio por kilo, los kilos, el tipo (A o B) y el tamaño')
+
+print('Utilizaremos, precio 30, kilos 4, tipo A y tamaño 2')
+
+print(calcula_ganancias_uva(30, 4, 'A', 2))
+
+#Ejercicio 15
+print(f'Función "costes_viaje", se le da el número de alumnos y calcula cuanto cuesta, devuelve coste por alumnos y total')
+
+print('Utilizaremos 60 como valor para los alumnos')
+print(costes_viaje(60))
+
+#Ejercicio 16
+print(f'Función "coste_llamada", requiere tres argumentos, el tiempo, si es domingo (S,N), turno (M, T)')
+
+print("Usaremos de tiempo (6), domingo (S), turno (M)")
+
+print(coste_llamada(6, 'S','M'))
+
+#Ejercicio 18
+print(f'Función "dia_escrito", un argumento de un número del 1 al 7 y da el día')
+
+print('Usaremos el argumento "4"')
+
+print(dia_escrito(4))
+
+#Ejercicio 19
+print(f'Función "num_dias_mes", requiere un mes en número (del 1 al 12), y indica cuantos días tiene el mes')
+
+print('Usare el mes 7')
+
+print(num_dias_mes(7))
