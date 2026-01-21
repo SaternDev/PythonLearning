@@ -12,10 +12,10 @@ for _ in range(5):
     frase = frase.lower()
     palabrasFrase = frase.split()
 
-    for i in range(0, len(palabrasFrase)):
-        if palabrasFrase[i] in palabrasCount:
-            palabrasCount[palabrasFrase[i]] = palabrasCount[palabrasFrase[i]] + 1
+    for i in palabrasFrase:
+        if i in palabrasCount:
+            palabrasCount[i] = palabrasCount[i] + 1
         else:
-            palabrasCount[palabrasFrase[i]] = 1
+            palabrasCount[i] = 1
 
 print(palabrasCount)
