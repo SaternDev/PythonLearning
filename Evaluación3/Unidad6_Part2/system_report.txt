@@ -1,0 +1,3 @@
+La fecha y hora es: 2026-02-11 08:36:41.875661
+El sistema operativo es: Windows
+El numero de CPUs es 16
