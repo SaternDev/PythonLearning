@@ -1,0 +1,3 @@
+ls -la
+df -h
+uname -a

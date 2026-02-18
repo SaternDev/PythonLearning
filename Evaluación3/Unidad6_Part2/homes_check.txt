@@ -1,0 +1,4 @@
+mauro ->  /home/mauro -> No existe
+satern ->  /home/satern -> No existe
+pablo ->  /home/pablo -> No existe
+raul ->  /home/raul -> No existe
