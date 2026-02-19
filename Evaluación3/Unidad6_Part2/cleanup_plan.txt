@@ -1,0 +1,4 @@
+/tmp
+/var/tmp
+/noexiste
+EjerciciosPracticar

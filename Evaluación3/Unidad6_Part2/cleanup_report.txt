@@ -1,0 +1,4 @@
+/tmp -> NO existe
+/var/tmp -> NO existe
+/noexiste -> NO existe
+EjerciciosPracticar -> existe -> elementos: 18
